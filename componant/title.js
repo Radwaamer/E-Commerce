@@ -3,7 +3,7 @@ document.getElementsByClassName("main")[0].innerHTML+=`<div class="title positio
 <div class="container position-relative py-4 text-light d-flex justify-content-between">
     <h2>Shop</h2>
     <div class="links d-flex align-items-center">
-        <a class="text-light" href="../home/index.html">Home</a>
+        <a class="text-light" href="../home/home.html">Home</a>
         <p class="m-0">&nbsp; / Products</p>
     </div>
 </div>

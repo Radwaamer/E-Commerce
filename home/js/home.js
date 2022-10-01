@@ -1,5 +1,5 @@
-document.querySelectorAll("nav .navbar-nav .nav-item .nav-link")[0].href="index.html";
-document.querySelector("nav .navbar-brand").href="index.html";
+document.querySelectorAll("nav .navbar-nav .nav-item .nav-link")[0].href="home.html";
+document.querySelector("nav .navbar-brand").href="home.html";
 // scroll to view items
 let prev = document.querySelector(".trend .shop .left");
 let next = document.querySelector(".trend .shop .right");

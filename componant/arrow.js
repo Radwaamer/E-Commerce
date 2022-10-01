@@ -4,6 +4,8 @@ document.querySelector("head style").innerHTML+=`.up{
     z-index: 1000;
     transition: var(--main-transition);
     color: var(--main-color);
+    bottom: -50px;
+    right: 20px;
 }
 .up:hover{
     animation: ups infinite 1.2s linear;
