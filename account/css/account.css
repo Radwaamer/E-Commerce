@@ -1,0 +1,50 @@
+.main .info{
+    max-width: 400px;
+    max-height: 519px;
+    overflow: hidden;
+}
+.info .boxes div{
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+.info .boxes div.active,
+.info .boxes div:hover{
+    transition: var(--main-transition);
+    opacity: 1 !important;
+}
+.info .user form input::placeholder{
+    font-size: 0.8rem;
+}
+.info .user form input,
+.info .user form select,
+.info .backup input{
+    outline: none;
+    caret-color: var(--main-color);
+}
+.info .user form input[type="submit"],
+.info .backup input[type="submit"]{
+    background-color: var(--main-color);
+}
+.info .user form .lost{
+    width: calc(100% + 32px);
+    left: -16px;
+    position: relative;
+}
+.info .user form .lost p,
+.info .backup p span{
+    cursor: pointer;
+    color: var(--bs-link-color);
+}
+.info .user .reg-form .name input{
+    width: 46%;
+}
+.info .backup{
+    max-width: 550px;
+    bottom: -600px;
+}
+.info .backup input[type="submit"]{
+    width: fit-content;
+}
+.info .backup, .info .normal{
+    transition: var(--main-transition);
+}

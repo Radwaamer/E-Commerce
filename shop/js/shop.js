@@ -1,0 +1,1 @@
+document.querySelectorAll("nav .navbar-nav .nav-item .nav-link")[1].href="shop.html";
