@@ -71,3 +71,90 @@ up.addEventListener("click",()=>{
         behavior:"smooth"
     });
 });
+
+//make visible or shown password
+let eyes=document.querySelectorAll(".info .user .eye");
+let eyeSlash=document.querySelectorAll(".info .user .eye-slash");
+eyes.forEach(eye=>{
+    eye.onclick=()=>{
+        eye.style.display="none";
+        eyeSlash.forEach(e=>{
+            if(eye.classList[0]==e.classList[0]){
+                e.style.display="block";
+            };
+        });
+        eye.parentElement.nextElementSibling.type="text";
+    };
+});
+eyeSlash.forEach(e=>{
+    e.onclick=()=>{
+        e.style.display="none";
+        eyes.forEach(eye=>{
+            if(e.classList[0]==eye.classList[0]){
+                eye.style.display="block";
+            };
+        });
+        e.parentElement.nextElementSibling.type="password";
+    };
+});
+
+//trim all inputs
+let trims=document.querySelectorAll(".info input");
+let forms=document.querySelectorAll("form");
+trims.forEach(trim=>{
+    if(!(trim.id=="fs-name" || trim.id=="ls-name")){
+        trim.oninput=()=>{
+            trim.value=trim.value.trim();
+        };
+    }
+    else if(trim.id=="fs-name" || trim.id=="ls-name"){
+        trim.onblur=()=>{
+            trim.value=trim.value.trim();
+        };
+    };
+});
+
+//check confirm password
+let pass=document.getElementById("pass-reg");
+let conf=document.getElementById("pass-conf");
+let mis=document.getElementsByClassName("mis")[0];
+conf.onblur=()=>{
+    if (conf.value!=pass.value){
+        mis.style.opacity="1";
+    }else{
+        mis.style.opacity="0";
+    }
+}
+conf.oninput=()=>{
+    if(conf.value==pass.value){
+        mis.style.opacity="0";
+    };
+};
+pass.oninput=()=>{
+    if(conf.value==pass.value){
+        mis.style.opacity="0";
+    };
+};
+
+//check inputs before submit
+forms[1].onsubmit=(e)=>{
+    if(conf.value!=pass.value){
+        e.preventDefault();
+        conf.focus();
+    };
+};
+
+//remember me functionality
+forms[0].onsubmit=(e)=>{
+    if(forms[0].querySelector("#remember").checked){
+        let date=new Date();
+        date.setMonth(date.getMonth+1);
+        document.cookie=`email=${forms[0].querySelector('#mail-in').value};express=${date}`;
+        document.cookie=`password=${forms[0].querySelector('#pass-in').value};express= ${date}`;
+    };
+};
+//get cookies
+document.body.onload=()=>{
+    forms[0].querySelector('#mail-in').value=(document.cookie).split(";")[0].substring((document.cookie).split(";")[0].indexOf("=")+1);
+    forms[0].querySelector('#pass-in').value=(document.cookie).split(";")[1].substring((document.cookie).split(";")[1].indexOf("=")+1);
+}

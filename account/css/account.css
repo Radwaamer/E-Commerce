@@ -1,6 +1,6 @@
 .main .info{
     max-width: 400px;
-    max-height: 519px;
+    max-height: 670px;
     overflow: hidden;
 }
 .info .boxes div{
@@ -38,6 +38,11 @@
 .info .user .reg-form .name input{
     width: 46%;
 }
+.info .user .mis{
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: var(--main-transition);
+}
 .info .backup{
     max-width: 550px;
     bottom: -600px;
@@ -47,4 +52,12 @@
 }
 .info .backup, .info .normal{
     transition: var(--main-transition);
+}
+.info .user .eye, .info .user .eye-slash{
+    right: 20px;
+    bottom: -37px;
+    cursor: pointer;
+}
+.info .user .eye-slash{
+    display: none;
 }
