@@ -10,7 +10,7 @@
 
 /* start landing */
 .landing{
-    background-image: url(../imgs/landing.jpg);
+    background-image: url(../../files/imgs/landing.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -153,7 +153,7 @@
 
 /* start sale */
 .sale{
-    background-image: url(../imgs/sale.png);
+    background-image: url(../../files/imgs/sale/sale.webp);
     background-size: cover;
     height: 500px;
 }

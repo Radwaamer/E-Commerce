@@ -1,6 +1,6 @@
 document.getElementsByClassName("main")[0].innerHTML=`<nav class="navbar navbar-expand-lg py-0">
 <div class="container d-flex align-items-center justify-content-between">
-    <a class="navbar-brand py-0" href="../home/home.html"><img class="img-fluid" src="../files/imgs/logo.png" alt="Logo"></a>
+    <a class="navbar-brand py-0" href="../home/home.html"><img class="img-fluid" src="../files/imgs/logo.webp" alt="Logo"></a>
     <div class="icons gap-3 ms-4 d-flex align-items-center justify-content-end flex-grow-1 me-4">
         <i class="glass nav-link fs-5 fa-solid fa-magnifying-glass"></i>
         <a class="items d-flex nav-link align-items-center" href="#">

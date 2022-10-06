@@ -9,7 +9,7 @@ document.getElementsByClassName("main")[0].innerHTML+=`<div class="title positio
 </div>
 </div>`
 document.querySelector("head style").innerHTML+=`.title{
-    background-image: url(../files/imgs/colorful.jpg);
+    background-image: url(../files/imgs/colorful.webp);
     background-size: cover;
 }
 .title .overlay{
